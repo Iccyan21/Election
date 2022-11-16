@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel ="stylesheet" href="{% static 'css/style.css' %}" />
+        <title>選挙投票サイト</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <h1>選挙投票サイト</h1>
+            </div>
+            <div class="header-right">
+            </div>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>Design Collage</p>
+        </footer>
+    </body>
+</html>
+
+
+        

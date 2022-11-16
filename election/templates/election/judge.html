@@ -1,0 +1,9 @@
+{% extends 'election/base.html' %}
+{% block content %}
+
+<div clas="judge">
+    <h2 class="text-center">投票しますか？</h2>
+    <a href="{% url 'vote' judge_data.pk %}" class="button">投票する</a>
+    <a href="{% url 'select' %}" class="button">投票しない</a>
+</div>
+{% endblock %}

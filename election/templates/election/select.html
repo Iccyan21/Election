@@ -1,0 +1,32 @@
+{% extends 'election/base.html' %}
+{% block content %}
+
+<div class="conteiner">
+    <h1 class="title">候補者一覧</h1>
+    {% for Candidate in data %}
+    <div class="card-list">
+        <div class="card">  
+            <a class="card_link" href="{% url 'Choose' Candidate.pk %}">
+                <div class="card-imgframe">
+                    <img src="{{ Candidate.image.url }}" width="200px" height="200px"/>
+                </div>
+                <div class="card-textbox">
+                    <div class="card-name">
+                        <h5>{{ Candidate.name }}</h5>
+                    </div>
+                    <div class="card-text">
+                        <p>{{ Candidate.Political }}</p>
+                    </div>
+                    <div class="card-vote">
+                        <p>投票数:{{ Candidate.vote }}</p>
+                    </div>
+                </div>
+           
+            </a>
+        </div> 
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

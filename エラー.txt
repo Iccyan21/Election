@@ -1,0 +1,6 @@
+ImportError: cannot import name 'os' from 'django'
+対処法：import os settingの一番上に！
+
+<int:pk>を使うとNoReverseMatch
+対処法：{% url 'base' base.pk %}を一度消去、<p>{{base.pk}}</p>で中身を表示させて確認する。
+{% for x in y%}の中に入れてから{{.pk}} を使う！！

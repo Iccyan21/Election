@@ -1,0 +1,13 @@
+{% extends 'election/base.html' %}
+{% block content %}
+
+<div class="">
+    <form action="" method="post" class="text-center">
+        {{ msg }}
+        {% csrf_token %}
+        <h5>投票番号を入力してください</h5>
+        {{ form.vote_id }}
+        <button>送信</button>
+    </form>
+</div> 
+{% endblock %}

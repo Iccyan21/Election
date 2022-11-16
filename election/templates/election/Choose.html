@@ -1,0 +1,25 @@
+{% extends 'election/base.html' %}
+{% block content %}
+
+<div class="select-container">
+    <h1 class="title">候補者詳細</h1>
+    <div class="select-card">
+        <div class="card-imgframe">
+            <img src="{{ Candidate_data.image.url }}" width="350" height="400" />
+        </div>
+        <div class="select-card-textbox">
+            <div class="select-card-name">
+                <h1>{{ Candidate_data.name }}</h1>
+            </div>
+            <div class="select-card-text">
+                <h3>{{ Cadidate_data.Political }}</h3>
+            </div>
+            <div class="select-card-explain">
+                <h4>{{ Candidate_data.description }}</h4>
+            </div>
+            <a href="{% url 'judge' Candidate_data.pk %}">投票する</a>        
+        </div>
+    </div>
+</div>
+
+{% endblock %}
